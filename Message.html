@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Mask 遮罩 · Via UI</title>
+        <title>Message 消息 · Via UI</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -62,10 +62,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="Pop.html" />
+    <link rel="next" href="Alert.html" />
     
     
-    <link rel="prev" href="Alert.html" />
+    <link rel="prev" href="Toast.html" />
     
 
     <style>
@@ -460,7 +460,7 @@
             
         </li>
     
-        <li class="chapter " data-level="7.3" data-path="Message.html">
+        <li class="chapter active" data-level="7.3" data-path="Message.html">
             
                 <a href="Message.html">
             
@@ -486,7 +486,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="7.5" data-path="Mask.html">
+        <li class="chapter " data-level="7.5" data-path="Mask.html">
             
                 <a href="Mask.html">
             
@@ -673,7 +673,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Mask 遮罩</a>
+        <a href="." >Message 消息</a>
     </h1>
 </div>
 
@@ -688,21 +688,19 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="via-mask--&#x906E;&#x7F69;&#x5C42;">via-mask  &#x906E;&#x7F69;&#x5C42;</h3>
-<p>  &#x906E;&#x7F69;&#x5C42;&#x7EC4;&#x4EF6;</p>
+                                <h3 id="via-message--&#x6D88;&#x606F;&#x63D0;&#x793A;">via-message  &#x6D88;&#x606F;&#x63D0;&#x793A;</h3>
+<p>  &#x6D88;&#x606F;&#x63D0;&#x793A;&#x7EC4;&#x4EF6;</p>
 <h3 id="&#x793A;&#x4F8B;&#x4EE3;&#x7801;">&#x793A;&#x4F8B;&#x4EE3;&#x7801;</h3>
 <ul>
 <li>&#x57FA;&#x672C;&#x4F7F;&#x7528;</li>
 </ul>
 <pre><code>wxml&#xFF1A;
-&lt;via-mask id=&quot;maskId&quot; &gt;
-    &lt;view style=&quot;margin-top:100rpx;margin-left:50%&quot; &gt;
-             &#x8FD9;&#x91CC;&#x4E3A;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x5185;&#x5BB9;
-    &lt;/view&gt;
-&lt;/via-mask&gt;
-js:
-    this.$mask = this.selectComponent(&apos;#maskId&apos;)
-    this.$mask.show()
+&lt;via-message id=&quot;message&quot;  /&gt;
+js&#xFF1A;
+this.selectComponent(&apos;#message&apos;).toast(&apos;Via UI&apos;)
+this.selectComponent(&apos;#message&apos;).success(&apos;&#x611F;&#x8C22;&#x4F7F;&#x7528;&#xFF01;&apos;)
+this.selectComponent(&apos;#message&apos;).error(&apos;&#x63D0;&#x4EA4;&#x5931;&#x8D25;&apos;)
+this.selectComponent(&apos;#message&apos;).loading(&apos;&#x52A0;&#x8F7D;&#x4E2D;&apos;)
 </code></pre><h3 id="&#x5C5E;&#x6027;">&#x5C5E;&#x6027;</h3>
 <table>
 <thead>
@@ -716,24 +714,10 @@ js:
 </thead>
 <tbody>
 <tr>
-<td>visible</td>
-<td>mask &#x662F;&#x5426;&#x53EF;&#x89C1;</td>
-<td>Boolean</td>
-<td>false</td>
 <td></td>
-</tr>
-<tr>
-<td>zIndex</td>
-<td>mask &#x5C42;&#x7EA7;</td>
-<td>Number</td>
-<td>10</td>
 <td></td>
-</tr>
-<tr>
-<td>clickClose</td>
-<td>&#x70B9;&#x51FB;&#x906E;&#x7F69;&#x533A;&#x57DF;&#x662F;&#x5426;&#x53EF;&#x5173;&#x95ED;</td>
-<td>Boolean</td>
-<td>true</td>
+<td></td>
+<td></td>
 <td></td>
 </tr>
 </tbody>
@@ -766,9 +750,9 @@ js:
 </thead>
 <tbody>
 <tr>
-<td></td>
-<td>&#x81EA;&#x5B9A;&#x4E49;&#x63D2;&#x69FD;</td>
 <td>-</td>
+<td>&#x81EA;&#x5B9A;&#x4E49;&#x5185;&#x5BB9;&#x6837;&#x5F0F;</td>
+<td>--</td>
 </tr>
 </tbody>
 </table>
@@ -789,16 +773,8 @@ js:
 <td>&apos;&apos;</td>
 <td></td>
 </tr>
-<tr>
-<td>onClickClose</td>
-<td>&#x70B9;&#x51FB;&#x906E;&#x7F69;&#x533A;&#x57DF;&#x89E6;&#x53D1;</td>
-<td>&apos;&apos;</td>
-<td></td>
-</tr>
 </tbody>
 </table>
-<h3 id="&#x8BF4;&#x660E;">&#x8BF4;&#x660E;</h3>
-<p>&#x5EFA;&#x8BAE;&#x4F7F;&#x7528; selectComponent &#x7684;&#x65B9;&#x5F0F;</p>
 
                                 
                                 </section>
@@ -826,12 +802,12 @@ js:
 
             
                 
-                <a href="Alert.html" class="navigation navigation-prev " aria-label="Previous page: Alert 对话框">
+                <a href="Toast.html" class="navigation navigation-prev " aria-label="Previous page: Toast 吐司">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="Pop.html" class="navigation navigation-next " aria-label="Next page: Pop 弹出层">
+                <a href="Alert.html" class="navigation navigation-next " aria-label="Next page: Alert 对话框">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -842,7 +818,7 @@ js:
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Mask 遮罩","level":"7.5","depth":1,"next":{"title":"Pop 弹出层","level":"7.6","depth":1,"path":"Pop.md","ref":"Pop.md","articles":[]},"previous":{"title":"Alert 对话框","level":"7.4","depth":1,"path":"Alert.md","ref":"Alert.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-search","search-plus","github","github-buttons","expandable-chapters-small","hide-element"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/JslinSir/via-ui.git"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"buttons":[{"user":"JslinSir","repo":"via-ui","type":"star","size":"big","count":true}]},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"JsLin","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Via UI","language":"zh-hans","links":{"sidebar":{"GitHub":"https://github.com/JslinSir","个人博客":"http://www.jslin.site"}},"gitbook":"*","description":"一个简单 易用 组件丰富的小程序原色组件库"},"file":{"path":"Mask.md","mtime":"2021-04-16T05:33:02.766Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-20T10:30:13.691Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Message 消息","level":"7.3","depth":1,"next":{"title":"Alert 对话框","level":"7.4","depth":1,"path":"Alert.md","ref":"Alert.md","articles":[]},"previous":{"title":"Toast 吐司","level":"7.2","depth":1,"path":"Toast.md","ref":"Toast.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-search","search-plus","github","github-buttons","expandable-chapters-small","hide-element"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/JslinSir/via-ui.git"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"buttons":[{"user":"JslinSir","repo":"via-ui","type":"star","size":"big","count":true}]},"expandable-chapters-small":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"JsLin","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Via UI","language":"zh-hans","links":{"sidebar":{"GitHub":"https://github.com/JslinSir","个人博客":"http://www.jslin.site"}},"gitbook":"*","description":"一个简单 易用 组件丰富的小程序原色组件库"},"file":{"path":"Message.md","mtime":"2021-04-20T10:21:06.455Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-20T10:30:13.691Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

@@ -1,5 +1,0 @@
-<view  class="iphone-x-bottom-view iphone-x-bottom" style="background:{{bg}}">
- <slot/>
-</view>
- 
-
